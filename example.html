@@ -12,19 +12,16 @@
 	<span id="message">Don't forget to run 'mocha'. </message>
 
 	<script type="text/javascript">
-		function addMessage(message) {
-			var el = document.getElementById('message')
-			var old = el.innerText
-			el.innerText = old + message
+		function addMessage(message, seconds) {
+			setTimeout(function(){
+				var el = document.getElementById('message')
+				var old = el.innerText
+				el.innerText = old + message
+			}, seconds * 1000)
 		}
 
-		setTimeout(function(){
-			addMessage(V1.Simple.Show())
-		}, 2000);
-
-		setTimeout(function(){
-			addMessage(V1.Depends.Show())
-		}, 4000);
+		addMessage(V1.Simple.Show(), 2)
+		addMessage(V1.Depends.Show(), 4)
 	</script>
 
 </body>
