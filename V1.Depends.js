@@ -1,7 +1,11 @@
-(function(root, simple){
+(function(root, require){
+	var simple = require('V1.Simple')
 
 	root.Show = function(){ return 'Not So ' + simple.Show() }
 
-})
-(typeof V1 === 'undefined' ? module.exports : V1.Depends = {}
-, typeof V1 === 'undefined' ? require('./V1.Simple') : V1.Uses('V1.Simple'))
+}).apply(this, 
+	typeof V1 === 'undefined' ?
+	[ module.exports, function(name) { return require('./' + name) } ]
+	:
+	[ V1.Depends = {} , V1.Uses ]
+)
