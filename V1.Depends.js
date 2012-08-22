@@ -1,7 +1,7 @@
 (function(root, require){
 	var simple = require('V1.Simple')
 
-	root.Show = function(){ return 'Not So ' + simple.Show() }
+	root.Show = function(){ return 'Really ' + simple.Show() }
 
 }).apply(this, 
 	typeof V1 === 'undefined' ?
