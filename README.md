@@ -1,4 +1,4 @@
-V1 Testable Modules
+Testable Modules
 ===
 
 template.js contains a template that you can use to create a module that can be tested in mocha and can be loaded with V1.Uses.
