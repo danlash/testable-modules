@@ -1,0 +1,31 @@
+<html>
+<head>
+	<script type="text/javascript">
+		V1 = {};
+		V1.Uses = function(name) { return eval(name) }
+	</script>
+	<script type="text/javascript" src="V1.Simple.js"></script>
+	<script type="text/javascript" src="V1.Depends.js"></script>
+</head>
+<body>
+
+	<span id="message">Don't forget to run 'mocha'. </message>
+
+	<script type="text/javascript">
+		function addMessage(message) {
+			var el = document.getElementById('message')
+			var old = el.innerText
+			el.innerText = old + message
+		}
+
+		setTimeout(function(){
+			addMessage(V1.Simple.Show())
+		}, 2000);
+
+		setTimeout(function(){
+			addMessage(V1.Depends.Show())
+		}, 4000);
+	</script>
+
+</body>
+</html>
