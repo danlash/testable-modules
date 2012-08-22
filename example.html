@@ -6,6 +6,7 @@
 	</script>
 	<script type="text/javascript" src="V1.Simple.js"></script>
 	<script type="text/javascript" src="V1.Depends.js"></script>
+	<script type="text/javascript" src="V1.Dom.js"></script>
 </head>
 <body>
 
@@ -22,6 +23,10 @@
 
 		addMessage(V1.Simple.Show(), 2)
 		addMessage(V1.Depends.Show(), 4)
+
+		setTimeout(function(){
+			V1.Dom.Show(document.getElementById('message'))
+		}, 6000)
 	</script>
 
 </body>
