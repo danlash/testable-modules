@@ -8,7 +8,7 @@ To use:
 3) copy this template into the file
 4) change the name near the bottom to match the file name
 5) use 'require' to load dependencies, do NOT assume V1.SomeDependency exists, require it
-6) add public methods to 'root', that is your interface
+6) add public methods to 'exports', that is your interface
 7) make a file in /web/scripts/tests called V1.MyModule.js
 8) use require to load your module and test it
 9) ...
@@ -16,12 +16,12 @@ To use:
 
 //*/
 
-(function(root, require){
+(function(exports, require){
 	var myDependency = require('V1.SomeDependency')
 
 	function privateMethod () {}
 
-	root.PublicMethod = function(){ privateMethod() }
+	exports.PublicMethod = function(){ privateMethod() }
 
 }).apply(this, 
 	typeof V1 === 'undefined' ?

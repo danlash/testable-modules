@@ -1,6 +1,6 @@
-(function(root, require){
+(function(exports, require){
 
-	root.Show = function(){ return 'Fun!' }
+	exports.Show = function(){ return 'Fun!' }
 
 }).apply(this, 
 	typeof V1 === 'undefined' ?

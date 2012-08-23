@@ -1,7 +1,7 @@
-(function(root, require){
+(function(exports, require){
 	var depends = require('V1.Depends')
 
-	root.Show = function(el, seconds){ 
+	exports.Show = function(el, seconds){ 
 		el.innerText = el.innerText + depends.Show() + "!!";
 	}
 
